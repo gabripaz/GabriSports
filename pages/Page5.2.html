@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Student: Gabriel Paz Paiva 
+     Description: The fifth page of the project, after the validated login accepted
+	 Starting Date: 13, July 2021.
+     Finished:  -->
+<head>    
+    <meta charset="UTF-8">
+    <title>Page 5 - Form</title>
+    <link rel="stylesheet" type="text/css" href="../css/Gradientbackground.css">
+    <link rel="stylesheet" type="text/css" href="../css/btnstyle.css">
+    <script src="../js/cookiesgetandsetters.js" language="javascript"></script>
+    <style>
+        body {margin:0; color: white; background-image: url("../img/backgroundtest.jpg"); background-repeat: no-repeat; background-size:cover;}        
+        h2, p {text-align: center;}
+        span {font-size: 1.3em; font-weight: bold;}        
+        .formcontainer{clear: both; width: 400px;margin: 50px 0 0 500px;}
+        .btn {width: 100%}        
+    </style>
+    <script>                           
+        function CompareDate()
+        {
+            var finaldate = new Date();
+            var initdate = Date.parse(getCookie("datebegin"));
+            //initdate is not using getTime() because it already been parsed, so it represents the number of miliseconds.            
+            var miliseconds = finaldate.getTime() - initdate;             
+            var seconds = parseInt(miliseconds/1000);
+            var minutes = 0;            
+            if (seconds>=60)
+            {
+                minutes = parseInt(seconds/60);
+                seconds = seconds- minutes*60;
+            }                       
+            document.getElementById("timetocomplete").innerHTML = "You took " + minutes.toString() + " minutes and " + seconds.toString() + " seconds to fill the form.";            
+        }
+    </script>
+</head>
+<body onload = "CompareDate()">
+    <div class = "grad">
+        <div class = "formcontainer">
+            <h2>Thank you for your subscription!</h2>
+            <p id = "timetocomplete"></p>
+            <input type="button" value="Go to Menu" class = "btn" onclick="window.location.href='../Content.html'">            
+        </div>
+    </div>
+    
+</body>
+</html>

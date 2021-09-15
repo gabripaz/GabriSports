@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Student: Gabriel Paz Paiva 
+    Description: The first page of the web site
+	  Date: 2021-07-01 -->
+<head>
+    <meta charset="UTF-8">    
+    <title>Content</title>
+    <link rel="stylesheet" type="text/css" href="./css/Gradientbackground.css">
+    <script>
+        function getDate()
+        {
+            d = new Date(); 
+            document.getElementById("date").innerHTML ="Today is " + d.toString();
+        }
+    </script>
+    <style>
+        body {margin: 0; color: white;}
+        h2 {text-align: center;}        
+    </style>
+</head>
+<body onload = "getDate()">
+    <div class = "grad">
+        <h2 id = "date"></h2>
+    </div>
+    
+</body>
+</html>

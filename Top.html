@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Gabriel Paz Paiva 
+       Description: The top page of the project first page
+	   Date: 29, June 2021 -->
+<head>
+    <meta charset="UTF-8">   
+    <title>Top</title>
+    <link rel="stylesheet" type="text/css" href="./css/btnstyle.css">
+    <style>
+        body {background-color: #004d98;margin: 0; padding-top: 3px;}        
+        label{color: white;}
+        .gridarea {width: 100%;}
+        .gridarea div:first-of-type {float: left;  width: 80%}
+        .gridarea div:nth-child(2) {float: left;}
+        img {display: block; margin: auto; border-radius: 5px;}
+    </style>
+    <script src="./js/loginandlogout.js" language="javascript"></script>
+</head>
+<body>    
+      <div class = "gridarea">          
+          <div><img src="./img/GabrielSportsLogo.png" alt="logo" height="95"/></div>
+          <div style = "text-align: right; margin: 10px;"><form>
+            <label for = "User">User :</label>
+            <input type="text" name = "User" id = "User" style = "margin-bottom: 5px;"/> <br/>
+            <label for="paswrd">Password :</label>
+            <input type="password" name="paswrd" id="paswrd" style = "margin-bottom: 5px;"/><br/>
+            <input type="button" value="Login" onclick="login()" class = "btn"/>
+            <input type="reset" value="Reset" class = "btn"/>
+          </form></div>        
+      </div>
+</body>
+</html>

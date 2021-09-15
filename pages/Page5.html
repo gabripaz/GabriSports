@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Student: Gabriel Paz Paiva 
+     Description: The fifth page of the project
+	 Starting Date: 01, July 2021.
+     Finished:  -->
+<head>    
+    <meta charset="UTF-8">
+    <title>Page 5 - Form</title>
+    <link rel="stylesheet" type="text/css" href="../css/Gradientbackground.css">
+    <script src="../js/cookiesgetandsetters.js" language="javascript"></script>
+    <style>
+        body {margin:0; color: white;}                
+        input[type=text], input[type=number], select{  
+        width: 80%;
+        padding: 5px 2px;
+        margin: 8px 5px;        
+        border-radius: 4px;}
+        .center30,input[type=number], select {width: 30%; text-align: center;}
+        h2 {text-align: center;}
+        .btn { border-radius: 3px;width: 40%; margin: 10px; color: white;background-color: #a50044;
+                padding: 10px; border: 1px solid white; cursor: pointer;}
+        .btn:hover {background-color: white;border: black; color: #a50044;}
+        .descritivelabel {font-size: 1.1em; font-weight: 600; padding-left: 5px;}
+        .formcontainer{clear: both; width: 400px;margin: 50px 0 0 500px;}        
+    </style>
+    <script>        
+        function Submitbtn()
+        {
+            var onlyletters = /(\d)/g
+            var zipcode = /[A-Z][0-9][A-Z][0-9][A-Z][0-9]/g
+            try
+            { 
+                var name, age, gender, address, country, zpcode;
+                name = document.getElementById("username").value.trim();
+                if(onlyletters.test(name) || name == "") 
+                {
+                    document.getElementById("username").focus();
+                    throw alert("Please insert a valid name. No digits allowed.");
+                }
+
+                age = document.getElementById("age").value;
+                if (age < 1 | age > 120 )
+                {
+                    document.getElementById("age").focus();
+                    throw alert("Please select a age between 1 - 120");
+                }
+                
+                if (!document.getElementById("female").checked && !document.getElementById("male").checked && !document.getElementById("other").checked)
+                {
+                    throw alert("Please select a gender.");
+                }else if (document.getElementById("female").checked) {gender = "female";}
+                else if (document.getElementById("male").checked) {gender = "male";}
+                else {gender = "other";}
+
+                address = document.getElementById("adr").value.trim();
+                if(address == "") 
+                {
+                    document.getElementById("adr").focus();
+                    throw alert("Please insert a valid address.");
+                }
+                zpcode = document.getElementById("zipcode").value;
+                if(!zipcode.test(zpcode))
+                {
+                    document.getElementById("zipcode").focus();
+                    throw alert("Please format the Zip Code as A1A1A1, where A is a letter and 1 is a digit");
+                }
+                setCookie("name",name,2);
+                setCookie("age",age,2);
+                setCookie("gender",gender,2);
+                setCookie("country",document.getElementById("country").value,2);
+                setCookie("address",address,2);
+                setCookie("zipcode",zpcode,2);
+                document.location.href = './Page5.1.html';
+            }catch (Exeption){}
+        }
+
+        function setDate(){
+	        let date = new Date(); 
+            setCookie("datebegin", date,2);	
+        }
+    </script>
+</head>
+<body onload="setDate()">
+    <div class = "grad">        
+        <div class = "formcontainer">
+            <h2>Subscribe to receive our discount coupons!</h2>
+            <hr class = "center30">
+            <form>
+                <label for="username" class = "descritivelabel">Full Name</label><br/>
+                <input type="text" name="username" id="username" placeholder="Gabriel Paz Paiva"><br/>
+                <label for="age" class = "descritivelabel">Age</label><br/>
+                <input type="number" name="age" id="age" step="1" placeholder= "21"><br/>
+                <label class = "descritivelabel">Gender</label><br/>
+                <input type="radio" name="g_input" id="male" value = "male">
+                <label for="male">Male</label>
+                <input type="radio" name="g_input" id="female" value = "female">
+                <label for="female">Female</label>
+                <input type="radio" name="g_input" id="other" value = "other">
+                <label for="other">Other</label><br/>
+                <label for="country" class = "descritivelabel">Country</label><br/>
+                <select id="country" name="country">                
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                </select><br/>
+                <label for="adr" class="descritivelabel">Address</label><br/>
+                <input type="text" id="adr" name="address" placeholder="2000 Saint-Catherine St W, Montreal"><br/>
+                <label for="zipcode" class="descritivelabel">ZipCode</label><br/>
+                <input type="text" id="zipcode" style="width: 90px; text-align: center;" name="zipcode" placeholder="H322T2" maxlength="6"><br/>
+                <input type="button" value="Submit" class = "btn" onclick = "Submitbtn()">
+                <input type="reset" value="Reset" class = "btn">               
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

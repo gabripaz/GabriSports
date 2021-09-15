@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Student: Gabriel Paz Paiva 
+    Description: The first page of the web site
+	  Date: 2021-07-17 
+        VALIDATED-->
+<head>
+    <meta charset="UTF-8">    
+    <title>Soccer and Health</title>
+    <link rel="stylesheet" type="text/css" href="../css/btnstyle.css">
+    <script>
+        function getDate()
+        {
+            d = new Date(); document.getElementById("date").innerHTML = (d.getMonth() + 1) + "/" +  d.getDate() + "/" +  d.getFullYear();
+        }
+    </script>
+    <style>
+        body {background-image: url("../img/backgroundtest.jpg"); background-repeat: no-repeat; background-size:cover;}        
+        img {border-radius: 16px;}
+        p {text-align: justify;}
+        #top {width: 80%; margin: auto;}
+        #titlediv{text-align: center; width: 80%; margin: auto;}
+        #maintitle h2,h4 {text-align: center; margin: 0;}
+        #news p, .littlenews p{margin: 15px;}
+        .bignews {float: left; width: 50%; margin-left: 10%;}
+        .bignews img{margin-left: 15px; margin: auto; display: block;}
+        .littlenews {float: left;width: 30%;}
+        .littlenews img {margin: auto; display: block;}     
+    </style>
+</head>
+<body onload = "getDate()">
+    <div id= "top">
+        <div id = "titlediv"><h1>Soccer Around The World</h1><hr/></div>
+        <div>
+            <p>This website is the project for the 420-DW2-AS Web Client Development made by Gabriel Paz Paiva. Its focus is to provide some information about international soccer, in general. <br/>
+            In this page you will find the latest news about international soccer; in the second page you will find information about the benefits of practicing soccer; in the third page there is the FIFA World Cup winners official list; the fourth page provides deep info about the next world cup stadiums; in the fifth page there is a subscription option for having discount coupons; and the last page has the source of all images, information, and and ideas that inspired me. <br/>I hope you enjoy and have fun!</p>
+            <hr/>
+        </div>                                      
+    </div>
+    <div id = "maincontent">
+        <div id = "maintitle">
+            <h2>Soccer news</h2>
+            <h4 id = "date"></h4>
+        </div>
+        <div id= "news">
+            <div class = "bignews">
+                <h3 style="text-align: center;">Euro 2020: 'Out of despair, Italy have brought joy to a nation'</h3>
+                <a href=" https://www.bbc.com/sport/football/57783077" target="_blank">
+                <img src="../img/news2img.jpg" alt="Italycheeer" height="300"></a> 
+                <p>The image of a crying Gianluigi Buffon filled the pages of nearly every newspaper in Italy.
+                    On 13 November 2017, the country shaped like a football boot could not score a goal against Sweden to qualify for the World Cup.                    
+                    <br/> It was more than a national tragedy - it was labelled as the apocalypse. On the cover of Italy's famous pink paper, Gazzetta dello Sport, the headline simply read: "The end."
+                    There was no rhythm to Italy's game, only a bunch of individuals doing all they could to avoid the shame of not qualifying. The public hated the team and their football association, but they particularly hated the coach.
+                    <br/> As another paper, La Repubblica, noted, "the apocalypse bore a blue hue" - the colour of the Azzurri - for Italy were unable to find one "miserable goal" against "a poor Sweden, embarrassing on a technical level yet proud in its resistance".
+                    Questions were asked about how such a proud footballing nation could fall so far. Who could resuscitate this blue beast? Carlo Ancelotti was the man everyone wanted. Roberto Mancini was who they got.
+                </p>   
+            </div>
+        </div>
+        <div class = "littlenews">
+            <h3 style="text-align: center;">England lose shootout in EURO 2020 Final</h3>
+            <a href="https://www.bbc.com/sport/football/51198762" target="_blank">
+                <img src="../img/news1img.jpg" alt="EnglandTeam" height="200"></a>
+            <p>England's bid to end their 55-year wait for a major trophy ended in the familiar agony of defeat in a penalty shootout as Italy claimed the Euro 2020 crown at Wembley.</p>
+        </div>
+        <div class = "littlenews">
+            <h3 style="text-align: center;">Messi, Barcelona agree new deal - sources</h3>
+            <a href="https://www.espn.com/soccer/soccer-transfers/story/4391242/lionel-messi-agrees-barcelona-contractaccepts-significant-wage-cut-sources" target="_blank">
+                <img src="../img/news3img.jpg" alt="Messi" height="200"></a>
+            <p>Lionel Messi and Barcelona have reached an agreement for the forward to sign a five-year deal with the Catalan club, sources have confirmed to ESPN.</p>
+        </div>
+        <div class = "littlenews" style = "margin-left: 5%;">
+            <h3 style="text-align: center;">South African soccer team outbreak tests Tokyo Olympics’ ‘covid-safe’ strategy</h3>
+            <a href="https://www.washingtonpost.com/sports/olympics/2021/07/19/tokyo-olympics-south-africa-soccer-covid-outbreak/" target="_blank">
+                <img src="../img/news4img.jpg" alt="SouthAfrica team" height="200"></a>
+            <p>An outbreak of infections among members of the South Africa men’s soccer team emerged as the first test of Olympic officials’ strategy of aggressive testing and swift isolation to prevent the spread of the coronavirus during the Tokyo Games.</p>
+        </div>
+        <div class = "littlenews">
+            <h3 style="text-align: center;">2021 Canadian Championship format and schedule announced</h3>
+            <a href="https://www.mlssoccer.com/news/2021-canadian-championship-format-and-schedule-announced" target="_blank">
+                <img src="../img/news5img.png" alt="Canadiancheeer" height="200"></a>
+            <p>Canada Soccer has announced both the schedule and format for the 2021 Canadian Championship, which will see 13 participants in a single knock-out competition culminating in the Final in October 2021.</p>
+        </div>
+        <div class = "littlenews">
+            <h3 style="text-align: center;">2.5 million field of dreams soccer facility planned for Carlsbad Springs</h3>
+            <a href="https://ottawa.ctvnews.ca/2-5-million-field-of-dreams-soccer-facility-planned-for-carlsbad-springs-1.5513471" target="_blank">
+                <img src="../img/news6img.png" alt="FieldBuild" height="200"></a>
+                <p>For Ron Palaczka, there’s a lot of personal history at the Maple Leaf Almrausch German Club in Ottawa. He played youth soccer on this field. That led to the field of dreams project. A $2.5 million investment to build a state-of-the-art soccer facility in Carlsbad Springs.
+                    And we’re told it is set to become the second-largest turf field in the city.</p>
+        </div>
+        <div class = "bignews">
+            <h3 style="text-align: center;">Men's U23 Olympic stars to watch include <br/> Reinier, Amad Diallo and Marc Cucurella</h3>
+            <a href="https://www.espn.com/soccer/mens-olympic-tournament/story/4434590/mens-u23-olympic-stars-to-watch-include-reinieramad-diallo-and-marc-cucurella" target="_blank">
+            <img src="../img/news7img.jpg" alt="BrazilianReinier" height="200"></a> 
+            <p>In the past, stars such as Argentina's Lionel Messi (2008), Mexico's Raul Jimenez (2012) and Brazil's Neymar (2016) have walked away with the gold medal, but the pandemic has limited the number of top players that clubs are willing to let go this summer. And there will be no fans.
+                <br/>
+                The Olympic tournament is not recognised as part of the official FIFA calendar so generally domestic clubs in Europe aren't obligated to release their players. But Spain's law says that those playing in La Liga must be allowed, which may explain the strength of their squad with six members of their Euro 2020 side included: Pedri, Eric Garcia, Dani Olmo, Unai Simon, Mikel Oyarzabal and Pau Torres.</p>   
+        </div>
+        <div class = "littlenews">
+            <h3 style="text-align: center;">Canadian women's soccer targets 3rd consecutive Olympic medal at Tokyo Games</h3>
+            <a href="https://www.cbc.ca/sports/olympics/summer/soccer/canada-women-s-olympic-soccer-preview-1.6106718" target="_blank">
+                <img src="../img/news8img.jpg" alt="Canadian Woman team" height="200"></a>
+                <p>Can Canada's women's soccer team bring home medals in three consecutive Olympics? Can they change the colour of the medal this time?<br/>
+                    Those are just some of the more pertinent questions ahead of the women's soccer tournament at the Tokyo Olympics set to kick off Wednesday morning.</p>
+        </div>
+        <div class = "bignews">
+            <h3 style="text-align: center;">PSG, Man United, Leipzig having the best transfer windows so far.<br/>Who else makes up the top 10?</h3>
+            <a href="https://www.espn.com/soccer/soccer-transfers/story/4432760/psgman-unitedleipzig-having-the-best-transfer-windows-so-far-who-else-makes-up-the-top-10" target="_blank">
+            <img src="../img/news9img.jpg" alt="BrazilianReinier" height="300"></a> 
+            <p>Soccer never stops. Now that Euro 2020 and the Copa America are in the books, the soccer world has flipped right back to its second-favorite topic beyond the game itself: transfers. <br/>
+                It's going to be a dizzying few weeks of rumours and potential moves, with big names such as Kylian Mbappe, Erling Haaland and Robert Lewandowski, among others, the subject of heavy innuendo. But while we sift through what is and isn't real in that regard, it might be useful to step back and look at what has happened to date. <br/>                
+                Acknowledging that there are still loads of moves to come, here are the 10 European teams that have had the best offseasons to date. We will update this periodically as the transfer window continues to unfold.</p>   
+        </div>
+        <div class = "littlenews">
+            <h3 style="text-align: center;">Messi or Maradona? Donovan or Dempsey? Who did you vote as the GOAT from the biggest nations?</h3>
+            <a href="https://www.espn.com/soccer/fifa-world-cup/story/4106301/messi-or-maradona-donovan-or-dempsey-you-decide-soccers-goats-in-these-countries" target="_blank">
+                <img src="../img/news10img.jpg" alt="Canadian Woman team" height="200"></a>
+                <p>Lionel Messi or Diego Maradona? Is Pele the undisputed best from Brazil? Clint Dempsey or Landon Donovan? What about the No. 1 from England? After asking our writers to nominate the most iconic players from around the world, we want you to vote as we try and settle some of the game's biggest debates: Who is the greatest male player of all time from 13 key countries?</p>
+        </div> 
+    </div>
+    <div style="min-height: auto; width: 25%; text-align: center; margin-left: 10%;">
+        <input type="button" value="Go to top" class = "btn" onclick="window.location.href='#top'"> 
+        <input type="button" value="Go to Menu" class = "btn" onclick="window.location.href='../Content.html'">                                        
+    </div>
+</body>
+</html>

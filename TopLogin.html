@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Gabriel Paz Paiva 
+       Description: The top page of the project first page
+	   Date: 29, June 2021 -->
+<head>
+    <meta charset="UTF-8">   
+    <title>Top</title>
+    <link rel="stylesheet" type="text/css" href="./css/btnstyle.css">
+    <style>
+        body {background-color: #004d98;margin: 0; padding-top: 3px; color: white;}
+        h3 {margin: 2px;}               
+        /* img {display: block; margin-left: auto; margin-right: 300px;border-radius: 5px; cursor: pointer;}        
+        .gridarea {display: grid; grid-template-columns: 80% auto; grid-row-gap: 10px;} */
+        .gridarea {width: 100%;}
+        .gridarea div:first-of-type {float: left;  width: 90%;}
+        .gridarea div:nth-child(2) {float: left;}
+        img {display: block; margin: auto; border-radius: 5px; cursor: pointer;}
+        .btn {width: 100%;}
+    </style>
+    <script src="./js/loginandlogout.js" language="javascript"></script>
+    <script>
+        function gotomenu()
+        {parent.location.href = "indexLogin.html";}
+    </script>
+</head>
+<body onload = "getUsername()">    
+      <div class = "gridarea">
+          <div><img src="./img/GabrielSportsLogo.png" alt="logo" height="95" onclick ="gotomenu()"/></div>          
+          <div style = "text-align: center;">
+            <h3>Welcome</h3>
+            <h3 id = "labelusername"></h3>
+            <input type="button" value="Logout" onclick="logout()" class = "btn"/>            
+          </div>        
+      </div>
+</body>
+</html>

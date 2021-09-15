@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Student: Gabriel Paz Paiva 
+     Description: The fifth page of the project, after the validated login
+	 Starting Date: 13, July 2021.
+     Finished:  -->
+<head>    
+    <meta charset="UTF-8">
+    <title>Page 5 - Form</title>
+    <link rel="stylesheet" type="text/css" href="../css/Gradientbackground.css">
+    <script src="../js/cookiesgetandsetters.js" language="javascript"></script>
+    <style>
+        body {margin:0; color: white;}                
+        input[type=text], input[type=number], select{  
+        width: 80%;
+        padding: 5px 2px;
+        margin: 8px 5px;        
+        border-radius: 4px;}
+        .center30,input[type=number], select {width: 30%; text-align: center;}
+        h2 {text-align: center;}
+        span {font-size: 1.3em; font-weight: bold;}
+        .btn { border-radius: 3px;width: 40%; margin: 10px; color: white;background-color: #a50044;
+                padding: 10px; border: 1px solid white; cursor: pointer;}
+        .btn:hover {background-color: white;border: black; color: #a50044;}
+        .descritivelabel {font-size: 1.1em; font-weight: 600; padding-left: 5px;}
+        .formcontainer{clear: both; width: 400px;margin: 50px 0 0 500px;}        
+    </style>
+    <script>        	    
+        function Fillinfo(name,age,gender,address,country,zipcode)
+        {
+            document.getElementById("uname").innerHTML = getCookie(name);
+            document.getElementById("uage").innerHTML = getCookie(age);
+            document.getElementById("ugender").innerHTML = getCookie(gender);
+            document.getElementById("uaddress").innerHTML = getCookie(address);
+            document.getElementById("ucountry").innerHTML = getCookie(country);
+            document.getElementById("uzipcode").innerHTML = getCookie(zipcode);
+        }
+    </script>
+</head>
+<body onload = "Fillinfo('name','age','gender','address','country','zipcode')">
+    <div class = "grad">
+        <div class = "formcontainer">
+            <h2>Subscribe to receive our discount coupons!</h2>
+            <hr class = "center30">
+            <h3>Are the following data correct?</h3>
+            <label>Name : </label><span id = "uname"></span><br/>
+            <label>Age : </label><span id = "uage"></span><br/>
+            <label>Gender : </label><span id = "ugender"></span><br/>
+            <label>Address : </label><span id = "uaddress"></span><br/>
+            <label>Country : </label><span id = "ucountry"></span><br/>
+            <label>ZipCode : </label><span id = "uzipcode"></span><br/><br/>
+            <input type="button" value="Yes, please Submit" class = "btn" onclick = "document.location.href = './Page5.2.html';">
+            <input type="button" value="No, let me change it" onclick = "window.history.go(-1);" class = "btn">               
+            
+        </div>
+    </div>
+    
+</body>
+</html>

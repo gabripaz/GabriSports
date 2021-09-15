@@ -1,0 +1,7 @@
+.grad {
+    min-height: 100%;
+    width: 100%;
+    position: fixed;
+    background: red; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to bottom right, #004d98, #a50044);
+}
